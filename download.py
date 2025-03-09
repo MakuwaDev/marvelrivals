@@ -115,7 +115,7 @@ for char in characters:
                 page.write(f'##### - {search.read()}\n')
         
         page.write('\n## [Back to characters]({% link characters.md %})\n\n')
-        page.write('## [Back to index]({% link index.md %})\n\n')
+        page.write('## [Back to index]({{ site.baseurl }}/index.html)\n\n')
 
 # Generate the characters page
 with open('characters.md', 'w') as page:
@@ -130,7 +130,7 @@ with open('characters.md', 'w') as page:
         page.write(f'## - **{char}** - [some google searches](\u007b% link characters/{char.replace(" ", "_")}.md %\u007d)\n\n')
         page.write(f'   {descriptions[char]}\n\n')
 
-    page.write('## [Back to index]({% link index.md %})\n\n')
+    page.write('## [Back to index]({{ site.baseurl }}/index.html)\n\n')
 
 # Generate the index page
 with open('index.md', 'w') as page:

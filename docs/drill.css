@@ -1,7 +1,26 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #181818;
+  padding: 20px;
+}
+
+.item {
+  background-color: #1f1f1f;
+  color: #ffffff;
+  padding: 20px;
+  margin: 10px;
+  flex: 1;
+  text-align: center;
+}
+.item:hover {
+  background-color: #404040;
+}
+
 @media (max-width: 800px) {
   .banner {
     display: none;
   }
 }
 
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=drill.css.map */

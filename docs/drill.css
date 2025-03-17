@@ -41,5 +41,28 @@ body {
     background-color: rgb(89.5, 89.5, 89.5);
   }
 }
+.left-align {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.right-align {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.center-align {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.space-around {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
 
 /*# sourceMappingURL=drill.css.map */

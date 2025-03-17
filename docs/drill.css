@@ -29,6 +29,14 @@ body {
   .banner {
     display: none;
   }
+  .container {
+    flex-direction: column;
+  }
+}
+@media (min-width: 801px) {
+  .item:hover {
+    background-color: #606060;
+  }
 }
 
 /*# sourceMappingURL=drill.css.map */

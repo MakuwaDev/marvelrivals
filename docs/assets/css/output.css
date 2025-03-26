@@ -7,7 +7,15 @@
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
     --color-sky-500: oklch(0.685 0.169 237.323);
-    --color-slate-900: oklch(0.208 0.042 265.755);
+    --color-sky-700: oklch(0.5 0.134 242.749);
+    --color-fuchsia-500: oklch(0.667 0.295 322.15);
+    --color-slate-50: oklch(0.984 0.003 247.858);
+    --color-gray-950: oklch(0.13 0.028 261.692);
+    --text-3xl: 1.875rem;
+    --text-3xl--line-height: calc(2.25 / 1.875);
+    --text-5xl: 3rem;
+    --text-5xl--line-height: 1;
+    --font-weight-bold: 700;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
   }
@@ -156,6 +164,29 @@
 }
 @layer utilities;
 body {
-  background-color: var(--color-slate-900);
+  background-color: var(--color-gray-950);
+  color: var(--color-slate-50);
+}
+h1 {
+  font-size: var(--text-5xl);
+  line-height: var(--tw-leading, var(--text-5xl--line-height));
+  --tw-font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-fuchsia-500);
+}
+h2 {
+  font-size: var(--text-3xl);
+  line-height: var(--tw-leading, var(--text-3xl--line-height));
+}
+a {
   color: var(--color-sky-500);
+  &:hover {
+    @media (hover: hover) {
+      color: var(--color-sky-700);
+    }
+  }
+}
+@property --tw-font-weight {
+  syntax: "*";
+  inherits: false;
 }

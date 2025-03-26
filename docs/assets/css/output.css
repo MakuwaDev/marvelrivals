@@ -11,8 +11,8 @@
     --color-violet-500: oklch(0.606 0.25 292.717);
     --color-slate-50: oklch(0.984 0.003 247.858);
     --color-gray-950: oklch(0.13 0.028 261.692);
-    --text-2xl: 1.5rem;
-    --text-2xl--line-height: calc(2 / 1.5);
+    --text-xl: 1.25rem;
+    --text-xl--line-height: calc(1.75 / 1.25);
     --text-5xl: 3rem;
     --text-5xl--line-height: 1;
     --text-7xl: 4.5rem;
@@ -164,12 +164,41 @@
     display: none !important;
   }
 }
-@layer utilities;
+@layer utilities {
+  .sticky {
+    position: sticky;
+  }
+  .container {
+    width: 100%;
+    @media (width >= 40rem) {
+      max-width: 40rem;
+    }
+    @media (width >= 48rem) {
+      max-width: 48rem;
+    }
+    @media (width >= 64rem) {
+      max-width: 64rem;
+    }
+    @media (width >= 80rem) {
+      max-width: 80rem;
+    }
+    @media (width >= 96rem) {
+      max-width: 96rem;
+    }
+  }
+  .table-auto {
+    table-layout: auto;
+  }
+  .shadow {
+    --tw-shadow: 0 1px 3px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 1px 2px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+}
 body {
   background-color: var(--color-gray-950);
   font-family: var(--font-mono);
-  font-size: var(--text-2xl);
-  line-height: var(--tw-leading, var(--text-2xl--line-height));
+  font-size: var(--text-xl);
+  line-height: var(--tw-leading, var(--text-xl--line-height));
   color: var(--color-slate-50);
 }
 h1 {
@@ -190,6 +219,61 @@ a {
       color: var(--color-sky-700);
     }
   }
+}
+@property --tw-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-shadow-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-inset-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-inset-shadow-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-ring-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-ring-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-inset-ring-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-inset-ring-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-ring-inset {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-ring-offset-width {
+  syntax: "<length>";
+  inherits: false;
+  initial-value: 0px;
+}
+@property --tw-ring-offset-color {
+  syntax: "*";
+  inherits: false;
+  initial-value: #fff;
+}
+@property --tw-ring-offset-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
 }
 @property --tw-font-weight {
   syntax: "*";

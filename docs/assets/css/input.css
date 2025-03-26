@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  @apply bg-zinc-950 text-slate-50 font-mono text-xl flex items-center justify-center h-screen m-0;
+  @apply bg-zinc-950 text-slate-50 font-mono text-xl flex items-center justify-center flex-col h-screen m-0;
 }
 
 h1 {

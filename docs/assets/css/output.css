@@ -229,6 +229,7 @@ body {
   margin: calc(var(--spacing) * 0);
   display: flex;
   height: 100vh;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   background-color: var(--color-zinc-950);

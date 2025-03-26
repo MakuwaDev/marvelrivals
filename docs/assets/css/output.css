@@ -204,11 +204,11 @@
   .table-auto {
     table-layout: auto;
   }
+  .flex-col {
+    flex-direction: column;
+  }
   .items-center {
     align-items: center;
-  }
-  .justify-center {
-    justify-content: center;
   }
   .bg-gray-950 {
     background-color: var(--color-gray-950);

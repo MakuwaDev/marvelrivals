@@ -192,11 +192,14 @@
   .mx-auto {
     margin-inline: auto;
   }
+  .my-auto {
+    margin-block: auto;
+  }
   .flex {
     display: flex;
   }
-  .h-screen {
-    height: 100vh;
+  .h-auto {
+    height: auto;
   }
   .max-w-2xl {
     max-width: var(--container-2xl);
@@ -209,6 +212,13 @@
   }
   .items-center {
     align-items: center;
+  }
+  .space-y-4 {
+    :where(& > :not(:last-child)) {
+      --tw-space-y-reverse: 0;
+      margin-block-start: calc(calc(var(--spacing) * 4) * var(--tw-space-y-reverse));
+      margin-block-end: calc(calc(var(--spacing) * 4) * calc(1 - var(--tw-space-y-reverse)));
+    }
   }
   .bg-gray-950 {
     background-color: var(--color-gray-950);
@@ -228,10 +238,11 @@
 body {
   margin: calc(var(--spacing) * 0);
   display: flex;
-  height: 100vh;
+  height: fit-content;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  overflow: auto;
   background-color: var(--color-zinc-950);
   font-family: var(--font-mono);
   font-size: var(--text-xl);
@@ -256,6 +267,11 @@ a {
       color: var(--color-sky-700);
     }
   }
+}
+@property --tw-space-y-reverse {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
 }
 @property --tw-shadow {
   syntax: "*";

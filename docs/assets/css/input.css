@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  @apply bg-zinc-950 text-slate-50 font-mono h-fit m-0 overflow-auto;
+  @apply bg-zinc-950 text-slate-50 font-mono h-screen m-0 overflow-auto;
 }
 
 h1 {
